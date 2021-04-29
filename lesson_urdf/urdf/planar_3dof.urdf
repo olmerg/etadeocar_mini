@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+
+<robot name="mobile">
+
+    <material name="red">
+        <color rgba="0.6 0.0 0.0 2"/>
+    </material>
+
+    <material name="green">
+        <color rgba="0 0.6 0 2"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0 0 0.6 2"/>
+    </material>
+
+	<link name="world" />
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/rieles.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <joint name="world_to_base" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+    </joint>
+
+    <!--LEG_L_F-->
+
+    <link name="c_l_f">
+        <visual>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/c.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <joint name="joint_clf" type="revolute">
+        <parent link="base_link"/>
+        <child link="c_l_f"/>
+        <origin xyz="2.035 1.00894 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.57" upper="1.57" effort="0.5" velocity="0.5"/>
+    </joint>
+
+    <link name="wheel_l_f">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/rueda.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="joint_wlf" type="continuous">
+        <origin xyz="0.0 0.38 -0.54746" rpy="0.0 0.0 0.0"/>
+        <parent link="c_l_f"/>
+        <child link="wheel_l_f"/>
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <!--LEG_R_F-->
+
+     <link name="c_r_f">
+        <visual>
+            <origin rpy="0 0 3.14159" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/c.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <joint name="joint_crf" type="revolute">
+        <parent link="base_link"/>
+        <child link="c_r_f"/>
+        <origin xyz="2.035 -1.00894 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.57" upper="1.57" effort="0.5" velocity="0.5"/>
+    </joint>
+
+    <link name="wheel_r_f">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/rueda.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="joint_wrf" type="continuous">
+        <origin xyz="0.0 -0.38 -0.54746" rpy="0.0 0.0 0.0"/>
+        <parent link="c_r_f"/>
+        <child link="wheel_r_f"/>
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <!--LEG_L_B-->
+
+    <link name="c_l_b">
+        <visual>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/c.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <joint name="joint_clb" type="revolute">
+        <parent link="base_link"/>
+        <child link="c_l_b"/>
+        <origin xyz="-2.035 1.00894 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.57" upper="1.57" effort="0.5" velocity="0.5"/>
+    </joint>
+
+    <link name="wheel_l_b">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/rueda.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="joint_wlb" type="continuous">
+        <origin xyz="0.0 0.38 -0.54746" rpy="0.0 0.0 0.0"/>
+        <parent link="c_l_b"/>
+        <child link="wheel_l_b"/>
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+    <!--LEG_R_B-->
+
+    <link name="c_r_b">
+        <visual>
+            <origin rpy="0 0 3.14159" xyz="0 0 0"/>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/c.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <joint name="joint_crb" type="revolute">
+        <parent link="base_link"/>
+        <child link="c_r_b"/>
+        <origin xyz="-2.035 -1.00894 0.0"/>
+        <axis xyz="0.0 0.0 1.0"/>
+        <limit lower="-1.57" upper="1.57" effort="0.5" velocity="0.5"/>
+    </joint>
+
+    <link name="wheel_r_b">
+        <visual name="">
+            <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://lesson_urdf/meshes/visual/rueda.stl" scale="0.1 0.1 0.1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="joint_wrb" type="continuous">
+        <origin xyz="0.0 -0.38 -0.54746" rpy="0.0 0.0 0.0"/>
+        <parent link="c_r_b"/>
+        <child link="wheel_r_b"/>
+        <axis xyz="0.0 1.0 0.0"/>
+    </joint>
+
+
+
+</robot>
+

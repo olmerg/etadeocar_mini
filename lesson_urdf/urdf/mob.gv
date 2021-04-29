@@ -1,0 +1,32 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base_link" [label="base_link"];
+"c_l_b" [label="c_l_b"];
+"wheel_l_b" [label="wheel_l_b"];
+"c_l_f" [label="c_l_f"];
+"wheel_l_f" [label="wheel_l_f"];
+"c_r_b" [label="c_r_b"];
+"wheel_r_b" [label="wheel_r_b"];
+"c_r_f" [label="c_r_f"];
+"wheel_r_f" [label="wheel_r_f"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"" -> "base_link"
+"base_link" -> "link_clb" [label="xyz: -2.035 1.00894 0 \nrpy: 0 -0 0"]
+"link_clb" -> "c_l_b"
+"c_l_b" -> "joint_wln" [label="xyz: 0 0.36 -0.54746 \nrpy: 0 -0 0"]
+"joint_wln" -> "wheel_l_b"
+"base_link" -> "link_clf" [label="xyz: 2.035 1.00894 0 \nrpy: 0 -0 0"]
+"link_clf" -> "c_l_f"
+"c_l_f" -> "joint_wlf" [label="xyz: 0 0.36 -0.54746 \nrpy: 0 -0 0"]
+"joint_wlf" -> "wheel_l_f"
+"base_link" -> "link_crb" [label="xyz: -2.035 -1.00894 0 \nrpy: 0 -0 0"]
+"link_crb" -> "c_r_b"
+"c_r_b" -> "joint_wrb" [label="xyz: 0 -0.36 -0.54746 \nrpy: 0 -0 0"]
+"joint_wrb" -> "wheel_r_b"
+"base_link" -> "link_crf" [label="xyz: 2.035 -1.00894 0 \nrpy: 0 -0 0"]
+"link_crf" -> "c_r_f"
+"c_r_f" -> "joint_wrf" [label="xyz: 0 -0.36 -0.54746 \nrpy: 0 -0 0"]
+"joint_wrf" -> "wheel_r_f"
+}
