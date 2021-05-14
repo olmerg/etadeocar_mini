@@ -44,11 +44,10 @@ Con el uso de la aplicación bluetooth electronics descargada en Android, se per
 Como se aprecia en la imágen, se utiliza un pad de 4 posiciones para enviar el carácter deseado que se procesa en el código para su ejecución en los motores Dynamixel. También se cuenta con un botón de parada, útil en cualquier momento ante algún imprevisto que se pueda presentar durante la ejecución.
 
 ### Código
-<<<<<<< HEAD
+
 Se programaron los servomotores utilizando [Arduino](https://www.arduino.cc) con la librería `Dynamixel.h`, las funciones creadas para desarrollar toda la lógica de funcionamiento fueron:
 =======
 Se programaron los servomotores utilizando [Arduino](https://www.arduino.cc)
->>>>>>> 7cd0f35ffbccfe227ca869ee74335661e3c88765
 
 ```
 /**
@@ -63,7 +62,6 @@ void computeVel()
 void computeAng()
 void computeAngAux()
 ```
-<<<<<<< HEAD
 ```
 /**
  * Retorna el sentido de giro de la rueda
@@ -96,5 +94,3 @@ Con el uso de la aplicación bluetooth electronics descargada en Android, se per
 Como se aprecia en la imágen, se utiliza un pad de 4 posiciones para enviar el carácter deseado que se procesa en el código para su ejecución en los motores Dynamixel. También se cuenta con un botón de parada, útil en cualquier momento ante algún imprevisto que se pueda presentar durante la ejecución. 
 
 ![Bluetooth app](images/app_layout.jpeg)
-=======
->>>>>>> 7cd0f35ffbccfe227ca869ee74335661e3c88765
