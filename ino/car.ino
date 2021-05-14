@@ -9,7 +9,6 @@ int OFFSET_R_FRONT = 0; //encontrar experimentalmente
 int OFFSET_L_REAR = 450;
 int OFFSET_R_REAR = 0; //encontrar experimentalmente
 
-
 /**
  * Definición de los motores de dirección
 */
@@ -56,8 +55,8 @@ double base_ = 10;
 
 void setup()
 {
-    Dynamixel.setSerial(&Serial1); // &Serial - Arduino UNO/NANO/MICRO, &Serial1, &Serial2, &Serial3 - Arduino Mega
-    Dynamixel.begin(1000000, 2);   // Inicialize the servo at 1 Mbps and Pin Control 2
+    Dynamixel.setSerial(&Serial1);
+    Dynamixel.begin(1000000, 2);
     Serial.begin(115200);
     Serial3.begin(9600);
     delay(1000);
@@ -114,7 +113,7 @@ void runCar()
     Dynamixel.setEndless(wheel_left_rear, ON);
     Dynamixel.setEndless(wheel_right_rear, ON);
 
-    int temp_vel_1 = map(abs(vel_left_front), 0, 50, 0, 1023); //cambiar ese 50vpor 150
+    int temp_vel_1 = map(abs(vel_left_front), 0, 50, 0, 1023);
     int temp_vel_2 = map(abs(vel_right_front), 0, 50, 0, 1023);
     int temp_vel_3 = map(abs(vel_left_rear), 0, 50, 0, 1023);
     int temp_vel_4 = map(abs(vel_right_rear), 0, 50, 0, 1023);
@@ -144,24 +143,19 @@ void turn(){
     /*
     *Comentar esta líne para hacer pruebas del sentido de giro*
     */
-    Dynamixel.move(dir_left_front, temp_ang_1 + OFFSET_L_FRONT - 153); // izquierda v2 // ofset 650/1024
-    Dynamixel.move(dir_right_front, temp_ang_2 + OFFSET_R_FRONT - 153); // mi derecha   temp_ang_2
-    Dynamixel.move(dir_left_rear, temp_ang_3 + OFFSET_L_REAR - 153); // derecha v2 //offset 450/1024
-    Dynamixel.move(dir_right_rear, temp_ang_4 + OFFSET_R_REAR - 153); // mi izquierda     temp_ang_4
+    Dynamixel.move(dir_left_front, temp_ang_1 + OFFSET_L_FRONT - 153); 
+    Dynamixel.move(dir_right_front, temp_ang_2 + OFFSET_R_FRONT - 153); 
+    Dynamixel.move(dir_left_rear, temp_ang_3 + OFFSET_L_REAR - 153); 
+    Dynamixel.move(dir_right_rear, temp_ang_4 + OFFSET_R_REAR - 153); 
     
     /*
     *Para observar mejor en las peruabs de sentido de giro*
     */
-    // Dynamixel.move(dir_left_front, 0); // izquierda v2 // ofset 650/1024
-    // Dynamixel.move(dir_right_front, 0); // mi derecha   temp_ang_2
-    // Dynamixel.move(dir_left_rear, 1023); // derecha v2 //offset 450/1024
-    // Dynamixel.move(dir_right_rear, 0); // mi izquierda     temp_ang_4
+    // Dynamixel.move(dir_left_front, 0);
+    // Dynamixel.move(dir_right_front, 0);
+    // Dynamixel.move(dir_left_rear, 1023);
+    // Dynamixel.move(dir_right_rear, 0);
 
-    // Serial.println("***ANGULOS***");
-    // Serial.println(front_left_steering * RAD_TO_DEG);
-    // Serial.println(front_right_steering * RAD_TO_DEG);
-    // Serial.println(rear_left_steering * RAD_TO_DEG);
-    // Serial.println(rear_right_steering * RAD_TO_DEG);
 }
 
 
@@ -176,7 +170,7 @@ void stopAll()
     Dynamixel.setEndless(wheel_left_rear, OFF);
     Dynamixel.setEndless(wheel_right_rear, OFF);
 
-    Dynamixel.move(dir_left_front, OFFSET_L_FRONT); //ENSAYAR
+    Dynamixel.move(dir_left_front, OFFSET_L_FRONT);
     Dynamixel.move(dir_right_front, OFFSET_R_FRONT);
     Dynamixel.move(dir_left_rear, OFFSET_L_REAR);
     Dynamixel.move(dir_right_rear, OFFSET_R_REAR);
