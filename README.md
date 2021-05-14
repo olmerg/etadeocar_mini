@@ -39,15 +39,9 @@ Las conexiones en protoboard del circuito se presentan a continuación junto con
 ![Circuit proteus](circuito/circuitoRobot1.png)
 ![Protoboard](circuito/proto.jpeg)
 
-### Conexión bluetooth
-Con el uso de la aplicación bluetooth electronics descargada en Android, se permite la realización de un panel para control del modelo. Esta aplicación se conecta de forma sencilla con el módulo para iniciar la transmisión de datos.
-Como se aprecia en la imágen, se utiliza un pad de 4 posiciones para enviar el carácter deseado que se procesa en el código para su ejecución en los motores Dynamixel. También se cuenta con un botón de parada, útil en cualquier momento ante algún imprevisto que se pueda presentar durante la ejecución.
-
 ### Código
 
 Se programaron los servomotores utilizando [Arduino](https://www.arduino.cc) con la librería `Dynamixel.h`, las funciones creadas para desarrollar toda la lógica de funcionamiento fueron:
-=======
-Se programaron los servomotores utilizando [Arduino](https://www.arduino.cc)
 
 ```
 /**
