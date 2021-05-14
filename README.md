@@ -18,3 +18,10 @@ Se diseñó el circuito utilizando Proteus;
 
 ### Código
 Se programaron los servomotores utilizando [Arduino](https://www.arduino.cc)
+
+`ejemplo del codigo arduino
+// retorna las velocidades
+void computeVel()
+// retorna los angulos
+void computeAng()
+`
