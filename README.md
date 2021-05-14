@@ -20,7 +20,8 @@ Antes de hacer la unión de los grupos de joint y wheel al chasis, se realizaron
 
 
 ### URDF
-Se modeló el robot utilzando URDF dentro del entorno de ROS, utilizando piezas generadas en formato .stl en el programa Autodesk Inventor., este modelo sirvio para observar la posición y los movimientos que podía tener cada joint y wheel.
+Se modeló el robot utilzando URDF dentro del entorno de ROS, utilizando piezas generadas en formato .stl en el programa Autodesk Inventor. Este modelo sirvio para observar la posición y los movimientos que podía tener cada joint y cada wheel.
+
 <img src="images/urdf.png" alt="urdf" height="400"/>
 
 Del cual se generó la cadena cinemática
