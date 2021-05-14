@@ -25,3 +25,10 @@ Se programaron los servomotores utilizando [Arduino](https://www.arduino.cc)
 */
 void computeVel()
 ```
+```
+/**
+ * Calculan el ángulo de cada joint
+*/
+void computeAng()
+void computeAngAux()
+```
