@@ -10,7 +10,7 @@ This project seeks to scale the electric vehicle ETadeo Car project, carried out
 Teniendo en cuenta el diseño determinado para lograr una escala aproximada en la estructura de 1:4, son empleados elementos de la marca robotis para la construcción de cada una de los grupos móviles de joint y wheel.
 Como elemento chasis se tiene el uso de riel DIN, con el fin de lograr una estructura rígida, reduciendo el peso y con ventajas para el ensamble rápido y ajustes ante cambios que puedan presentarse en el diseño.  Es importante tener en cuenta el acople entre cables para lograr la extensión que permita alcanzar la distancia parámetro entre la base de las ruedas. Sin embargo, es fundamental observar la forma de entrada en los motores, ya que estos no permiten adaptabilidad a modelos que se puedan encontrar en el mercado genérico. Esto lo convierte en un recurso limitante en la construcción del modelo a escala junto con los tornillos que permiten la unión de las partes.
 
-![Estructura eTadeoCar](images/estructura.jpeg)
+<img src="images/estructura.jpeg" alt="Estructura eTadeoCar" width="200"/>
 
 Antes de hacer la unión de los grupos de joint y wheel al chasis, se realizaron pruebas con los motores en el software Dynamixel Wizard 2.0 con la utilización de el hardware de robotis USB2Dynamixel, quien precisa de un controlador en el computador para su uso efectivo. En este se caracterizaron los motores según el movimiento que realizan (joint o wheel), se configuraron las ID para utilizar en la programación y los baudios de comunicación, los cuales son adaptados en 1000000.
 
