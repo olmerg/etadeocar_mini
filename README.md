@@ -7,7 +7,7 @@ El resultado final de este proyecto se encuentra en [este enlace](https://youtu.
 ## Industrial robotics 2021-1
 This project seeks to scale the electric vehicle ETadeo Car project, carried out by the University of Bogotá Jorge Tadeo Lozano. This vehicle corresponds to an electric model with four-wheel drive using [Dynamixel](http://www.dynamixel.com) servo motors. Development includes the stages of; design, construction, motor testing, circuit construction taking into account the possibility of bluetooth control and controller programming integrating the kinematics of the robot to relate it to linear and angular input velocity.
 
-The fineal result of this project can be found at [this link](https://youtu.be/BBhkFSA11gs).
+The final result of this project can be found at [this link](https://youtu.be/BBhkFSA11gs).
 
 ### Construccción
 Teniendo en cuenta el diseño determinado para lograr una escala aproximada en la estructura de 1:4, son empleados elementos de la marca robotis para la construcción de cada una de los grupos móviles de joint y wheel.
