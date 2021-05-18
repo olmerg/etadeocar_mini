@@ -98,4 +98,4 @@ Como se aprecia en la imágen, se utiliza un pad de 4 posiciones para enviar el 
 
 <img src="images/app_layout.jpeg" alt="Bluetooth App" height="400"/>
 
-En esta aplicación se emplea un pad de 4 posiciones para enviar un caracter que esta relacionado con el código en la programación, asociado respectivamente con un movimiento específico. En este caso como se aprecia en la imágen, los caracteres utilizados para el movimiento del robot son A, a, B, b. Por su parte, se emplea un botón (buttons) de color rojo, el cual está asociado al caracter s para el paro del robot y vuelta a la posición inicial. La aplicacion se encuentra en [esta ruta](App\ETadeo_Car_PanelBluetooth.kwl).
+En esta aplicación se emplea un pad de 4 posiciones para enviar un caracter que esta relacionado con el código en la programación, asociado respectivamente con un movimiento específico. En este caso como se aprecia en la imágen, los caracteres utilizados para el movimiento del robot son A, a, B, b. Por su parte, se emplea un botón (buttons) de color rojo, el cual está asociado al caracter s para el paro del robot y vuelta a la posición inicial. La aplicacion se encuentra en [esta ruta](App).
