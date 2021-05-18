@@ -24,6 +24,7 @@ Antes de hacer la unión de los grupos de joint y wheel al chasis, se realizaron
 
 ### URDF
 Se modeló el robot utilzando URDF dentro del entorno de ROS, utilizando piezas generadas en formato .stl en el programa Autodesk Inventor. Este modelo sirvio para observar la posición y los movimientos que podía tener cada joint y cada wheel.
+Las piezas pueden ser encontradas [aquí]](Piezas) 
 
 <img src="images/urdf.png" alt="urdf" height="400"/>
 
